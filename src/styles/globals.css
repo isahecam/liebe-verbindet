@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@plugin "@midudev/tailwind-animations";
+
+@theme {
+  /* Breakpoints personalizados */
+  --breakpoint-xs: 425px;
+  --breakpoint-xsm: 520px;
+
+  /* Paleta de colores valentines-day */
+  --color-valentines-day-50: #FFF5FA;
+  --color-valentines-day-100: #FFEBF4;
+  --color-valentines-day-200: #FFD6E9;
+  --color-valentines-day-300: #FFBDDC;
+  --color-valentines-day-400: #FFA8D1;
+  --color-valentines-day-500: #FF93C6;
+  --color-valentines-day-600: #FF429A;
+  --color-valentines-day-700: #F00070;
+  --color-valentines-day-800: #A3004C;
+  --color-valentines-day-900: #520026;
+  --color-valentines-day-950: #290013;
+
+  /* Animación text-gradient */
+  --animate-text-gradient: text-gradient 1.5s linear infinite;
+
+  @keyframes text-gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
