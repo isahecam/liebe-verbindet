@@ -1,0 +1,36 @@
+---
+import OSAvailabilityBadge from "@/components/OSAvailabilityBadge.astro";
+import DownloadButton from "@/components/DownloadButton.astro";
+import Logo from "@/components/Logo.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<section
+  class="flex h-dvh flex-col justify-center items-center gap-5 p-4 sm:p-6 md:w-1/2 lg:gap-8"
+>
+  <Logo />
+
+  <header class="space-y-2 lg:space-y-4 text-center">
+    <h1 class="text-3xl lg:text-4xl text-balance font-bold">
+      Una app hecha con <span class="text-highlight">Amor</span> y <span
+        class="text-highlight">Realidad Aumentada</span
+      > que une nuestros corazones <span class="animate-heartbeat inline-block"
+        >❤️</span
+      >
+    </h1>
+    <p class="text-sm lg:text-base text-pretty">
+      Disfruta la experiencia de un hermoso detalle hecho con amor a través de
+      Realidad Aumentada. Para comenzar, descarga nuestra aplicación a través
+      del siguiente enlace o bien escanea el código QR.
+    </p>
+  </header>
+
+  <div
+    class="flex flex-col justify-center sm:flex-row items-center gap-6 lg:gap-8"
+  >
+    <DownloadButton />
+    <OSAvailabilityBadge />
+  </div>
+
+  <Footer />
+</section>
