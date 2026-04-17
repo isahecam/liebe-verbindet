@@ -1,22 +1,12 @@
 ---
-import Layout from "./../layouts/Layout.astro";
-import Hero from "./../components/Hero.astro";
-import Banner from "./../components/Banner.astro";
-import Footer from "./../components/Footer.astro";
-import QR from "../components/QR.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import Hero from "@/sections/Hero.astro";
+import QR from "@/sections/QR.astro";
 ---
 
-<Layout
-  description="Descubre Liebe Verbindet, una aplicación perfecta como regalo para este día de San Valentín con realidad aumentada que une corazones 💕. Explora una experiencia única para celebrar el amor con tecnología creada por alumnos de ISTII."
-  title="Liebe Verbindet | A beautiful Valentine's Day App with Augmented Reality ❤️"
-  urlImage="/liebe-verbindet.webp"
->
-  <Hero />
-  <main
-    class="flex flex-col lg:px-0 lg:flex-row lg:items-center lg:justify-between relative"
-  >
-    <Banner />
+<MainLayout>
+  <main class="flex flex-col md:flex-row items-center max-w-7xl mx-auto">
+    <Hero />
     <QR />
   </main>
-  <Footer />
-</Layout>
+</MainLayout>
