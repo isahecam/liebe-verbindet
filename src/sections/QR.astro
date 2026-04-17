@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+---
+
+<aside
+  class="hidden md:flex flex-col items-center justify-center flex-1"
+  aria-label="Código QR para descargar la aplicación"
+>
+  <div
+    class="qr-circle size-80 lg:size-96 rounded-full grid place-content-center
+           bg-linear-to-br from-red-50 via-pink-50 to-red-100
+           ring-2 ring-pink-300/60
+           shadow-xl shadow-pink-200/50
+           hover:scale-[1.03] transition-transform duration-500
+           cursor-default"
+  >
+    <figure class="flex flex-col items-center px-6">
+      <Image
+        src="/qr-code.svg"
+        alt="Liebe Verbindet Código QR"
+        width={256}
+        height={256}
+        loading="eager"
+        class="w-full h-auto"
+      />
+      <figcaption
+        class="text-xs uppercase tracking-wider font-semibold text-red-400 mt-3 select-none"
+      >
+        Escanea para descargar
+      </figcaption>
+    </figure>
+  </div>
+</aside>
+
+<style>
+  .qr-circle {
+    animation: float-safe 3s ease-in-out infinite;
+  }
+
+  @keyframes float-safe {
+    0%, 100% { translate: 0 0; }
+    50%       { translate: 0 -10px; }
+  }
+</style>

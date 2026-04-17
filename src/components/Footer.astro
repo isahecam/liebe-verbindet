@@ -1,22 +1,28 @@
 ---
-import LinkSocial from "./../components/LinkSocial.astro";
-const currentYear = new Date().getFullYear();
+import SocialLink from "@/components/SocialLink.astro";
+import ExternalLink from "@/assets/icons/external-link.svg";
 ---
 
-<footer
-  class="text-[10px] flex flex-col py-6 text-center xsm:text-start text-pretty"
->
+<footer class="text-xs text-center text-pretty mt-auto md:mt-0">
   <p>
-    © {currentYear}
-    <LinkSocial
-      url="https://github.com/isahernz/valentines-day.app"
-      text="Liebe Verbindet"
-    />. Desarrollado con ❤️ por
-    <LinkSocial url="https://www.instagram.com/angie_jimd/" text="Angy" />
-    <span>y</span>
-    <LinkSocial url="https://www.instagram.com/_isahernz/" text="Brandon" />
+    © <span id="current-year"></span>
+    <SocialLink to="https://github.com/isahecam/liebe-verbindet"
+      >Liebe Verbindet <ExternalLink class="size-3 inline-block" /></SocialLink
+    >
   </p>
-  <span
-    >Desde San José Chiapa, Puebla Ciudad Modelo, para todo el mundo. 🌎</span
-  >
+  <p>
+    Desarrollado con ❤️ por
+    <SocialLink to="https://www.instagram.com/angie_jimd/">Angy</SocialLink>
+    <span>y</span>
+    <SocialLink to="https://www.instagram.com/_isahernz/">Brandon</SocialLink>
+  </p>
+  <p>Desde San José Chiapa, Puebla Ciudad Modelo, para todo el mundo. 🌎</p>
 </footer>
+
+<script>
+  const $currentYear = document.querySelector(
+    "#current-year",
+  ) as HTMLSpanElement;
+
+  $currentYear.textContent = new Date().getFullYear().toString();
+</script>

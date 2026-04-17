@@ -1,0 +1,51 @@
+---
+const {
+  title = "Liebe Verbindet | Una app hecha con Amor y Realidad Aumentada que une nuestros corazones ❤️",
+  ...props
+} = Astro.props;
+---
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+<title>{title}</title>
+<meta
+  name="description"
+  content="Liebe Verbindet, una aplicación desarrollada como un regalo para el día de San Valentín con realidad aumentada que une corazones 💕."
+/>
+
+<meta
+  name="keywords"
+  content="Liebe Verbindet, app, realidad aumentada, amor, San Valentín, regalo, corazones, ISTII, Puebla, Ciudad Modelo"
+/>
+<meta name="author" content="Angy Jiménez, Brandon Hernández" />
+
+<!-- Twitter tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta
+  name="twitter:description"
+  content="Liebe Verbindet, una aplicación desarrollada como un regalo para el día de San Valentín con realidad aumentada que une corazones 💕."
+/>
+<meta
+  name="twitter:image"
+  content="https://liebe-verbindet.vercel.app/_astro/liebe-verbindet.webp"
+/>
+<meta name="twitter:image:alt" content="Liebe Verbindet SEO Banner" />
+
+<!-- Open Graph tags -->
+<meta property="og:title" content={title} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://liebe-verbindet.vercel.app/" />
+<meta
+  property="og:description"
+  content="Liebe Verbindet, una aplicación desarrollada como un regalo para el día de San Valentín con realidad aumentada que une corazones 💕."
+/>
+<meta
+  property="og:image"
+  content="https://liebe-verbindet.vercel.app/_astro/seo-banner.BZD7kegZ.webp"
+/>
+<meta property="og:image:alt" content="Liebe Verbindet SEO Banner" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<meta name="robots" content="index, follow" />
